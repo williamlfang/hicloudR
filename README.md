@@ -128,3 +128,47 @@ No man pages found in package  ‘hicloudR’
 
 ## 托管到 `github`
 
+### 添加 `repo`
+
+```bash
+git add ./*
+git commit -m 'init'
+git push
+```
+
+### 安装
+
+然后就可以直接安装了
+
+- `devtools::install_github("williamlfang/hicloudR")`
+
+```bash
+❯ devtools::install_github("williamlfang/hicloudR")
+Downloading GitHub repo williamlfang/hicloudR@master
+✔  checking for file ‘/tmp/RtmpDbpRnz/remotes41d42dcbca76/williamlfang-hicloudR-20b2dbf/DESCRIPTION’ ...
+─  preparing ‘hicloudR’:
+✔  checking DESCRIPTION meta-information
+─  checking for LF line-endings in source and make files and shell scripts
+─  checking for empty or unneeded directories
+─  building ‘hicloudR_0.1.tar.gz’
+
+Installing package into '/home/william/R/x86_64-pc-linux-gnu-library/3.6'
+(as 'lib' is unspecified)
+* installing *source* package ‘hicloudR’ ...
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+这是一个 hicloudR 的软件包，目前基于开源协议 MIT 进行创作。
+所有版权归属汉云投资。
+@williamlfang
+** help
+No man pages found in package  ‘hicloudR’
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (hicloudR)
+
+```
+
