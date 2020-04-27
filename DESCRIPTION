@@ -1,2 +1,4 @@
 Package: hicloudR
 Version: 0.1
+LinkingTo: Rcpp
+Imports: Rcpp

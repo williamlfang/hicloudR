@@ -36,6 +36,58 @@ Version: 0.1
 exportPattern("^[[:alpha:]]+")
 ```
 
+## 使用 Rcpp
+
+- 在 `DESCRIPTION` 添加
+
+  `````
+  Package: hicloudR
+  Version: 0.1
+  LinkingTo: Rcpp
+  Imports: Rcpp
+  `````
+
+- 在 `NAMESPACE` 添加
+
+  ```
+  exportPattern("^[[:alpha:]]+")
+  useDynLib(hicloudR)
+  importFrom(Rcpp, sourceCpp)
+  ```
+
+- 把 `myRcpp.cpp` 放在 `src` 目录下面
+
+- 然后在这个包目录 （与 `R`、`src` 并行的）运行
+
+  ``` bash
+  tree -L 2
+  
+  .
+  ├── data
+  ├── DESCRIPTION
+  ├── man
+  ├── NAMESPACE
+  ├── R
+  │   ├── about.R
+  │   └── RcppExports.R
+  ├── README.md
+  ├── src
+  │   ├── myRcpp.cpp
+  │   └── RcppExports.cpp
+  └── tests
+  
+  Rscript -e "Rcpp::compileAttributes()"
+  ```
+
+  这样会生成两个文件
+
+  - `R/RcppExports.R`
+  - `src/RcppExports.cpp`
+
+  
+
+  
+
 
 
 ### 打包
